@@ -22,7 +22,9 @@ for line in file.readlines():
             elif "red" in cube:
                 red = max(red, int(cube[:2]))
 
-    result += blue * red * green
+    total = blue + red + green
+    if red <= 12 and green <= 13 and blue <= 14 and total <= 12 + 13 + 14:
+        result += gameNum
 
 file.close()
 print(result)
